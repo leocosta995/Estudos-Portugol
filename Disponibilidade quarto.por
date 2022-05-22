@@ -42,10 +42,10 @@ programa
 				escreva ("\n")
 				para (i = 0; i < 20; i++){
 					se (listaQuarto[i][1] == "L"){
-						escreva ("Quarto ", listaQuarto[i][0], " esta disponível" )
+						escreva ("Quarto ", listaQuarto[i][0], " esta livre" )
 						escreva ("\n")
 					}senao se (listaQuarto[i][1] == "O"){
-							escreva ("Quarto ", listaQuarto[i][0], " esta indisponível" )
+							escreva ("Quarto ", listaQuarto[i][0], " esta ocupado" )
 							escreva ("\n")
 					}senao{
 						se(listaQuarto[i][1] == ""){
@@ -75,4 +75,5 @@ programa
  * @SIMBOLOS-INSPECIONADOS = {listaQuarto, 6, 9, 11};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
  */
