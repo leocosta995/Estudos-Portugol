@@ -1,9 +1,6 @@
 programa
 {
 	
-	programa
-{
-	
 	funcao inicio()
 	{
 		real diaria = 0
@@ -34,7 +31,7 @@ programa
 				escreva ("\nEntradas gratuitas: ", gratuito)
 				total = (inteira*diaria) + (meia*diaria/2)
 				escreva ("\n\nTotal: ", total, "\n", "\n")
-				para (i = 0; i < 99; i++){
+				para (i = 0; i < 100; i++){
 					se (listaIdade[i] > 0 e listaIdade[i] > maior){
 						maior = listaIdade[i]
 						imaior = i
@@ -55,10 +52,10 @@ programa
 					listaIdade[i] = idade
 
 					se (idade < 4){
-						escreva (nome, "\npossui gratuidade")
+						escreva (nome, "\npossui gratuidade", "\n")
 						gratuito++
 					}senao se (idade > 80){
-						escreva (nome, "\npaga meia")
+						escreva (nome, "\npaga meia, ", "\n")
 						meia++
 					}senao{
 						inteira++
