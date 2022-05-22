@@ -1,6 +1,9 @@
 programa
 {
 	
+	programa
+{
+	
 	funcao inicio()
 	{
 		real diaria = 0
@@ -12,6 +15,10 @@ programa
 		inteiro meia = 0
 		inteiro inteira = 0
 		inteiro total = 0
+		inteiro maior = 0
+		inteiro menor = 10000000
+		inteiro imaior = 0
+		inteiro imenor = 0
 		
 		escreva ("Valor da diária: ")
 		leia (diaria)
@@ -26,10 +33,19 @@ programa
 				escreva ("\nMeia-entradas: ", meia)
 				escreva ("\nEntradas gratuitas: ", gratuito)
 				total = (inteira*diaria) + (meia*diaria/2)
-				escreva ("\n\nTotal: ", total, "\n")
-
-				
-				
+				escreva ("\n\nTotal: ", total, "\n", "\n")
+				para (i = 0; i < 99; i++){
+					se (listaIdade[i] > 0 e listaIdade[i] > maior){
+						maior = listaIdade[i]
+						imaior = i
+					}
+					se (listaIdade[i] > 0 e listaIdade[i] < menor){
+						menor = listaIdade[i]
+						imenor = i
+					}
+				}
+				escreva ("O mais velho é ", listaNome[imaior], " com ", listaIdade[imaior], " anos ", "\n")
+				escreva ("O mais novo é ", listaNome[imenor], " com ", listaIdade[imenor], " anos ", "\n")
 				retorne
 			}senao{
 				escreva ("Idade: ")
