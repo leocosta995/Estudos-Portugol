@@ -16,51 +16,53 @@ programa
 		inteiro menor = 10000000
 		inteiro imaior = 0
 		inteiro imenor = 0
+		caracter continue = 'S'
 		
 		escreva ("Valor da diária: ")
 		leia (diaria)
 
 		para (inteiro i = 0; i < 100; i++){
-			escreva ("\nNome: ")
-			leia (nome)
-			
-			se (nome == "PARE"){
-				escreva ("\n\n                    DIÁRIA                    \n\n")
-				escreva ("Valor integral: ", inteira)
-				escreva ("\nMeia-entradas: ", meia)
-				escreva ("\nEntradas gratuitas: ", gratuito)
-				total = (inteira*diaria) + (meia*diaria/2)
-				escreva ("\n\nTotal: ", total, "\n", "\n")
-				para (i = 0; i < 100; i++){
-					se (listaIdade[i] > 0 e listaIdade[i] > maior){
-						maior = listaIdade[i]
-						imaior = i
+			escolha (continue){
+				caso 'S': escreva ("\nNome: ")
+					leia (nome)
+					escreva ("Idade: ")
+					leia (idade)
+					se (listaNome[i] == ""){
+						listaNome[i] = nome
+						listaIdade[i] = idade
+	
+						se (idade < 4){
+							escreva (nome, "\npossui gratuidade", "\n")
+							gratuito++
+						}senao se (idade > 80){
+							escreva (nome, "\npaga meia, ", "\n")
+							meia++
+						}senao{
+							inteira++
+						}	
 					}
-					se (listaIdade[i] > 0 e listaIdade[i] < menor){
-						menor = listaIdade[i]
-						imenor = i
-					}
-				}
-				escreva ("O mais velho é ", listaNome[imaior], " com ", listaIdade[imaior], " anos ", "\n")
-				escreva ("O mais novo é ", listaNome[imenor], " com ", listaIdade[imenor], " anos ", "\n")
-				retorne
-			}senao{
-				escreva ("Idade: ")
-				leia (idade)
-				se (listaNome[i] == ""){
-					listaNome[i] = nome
-					listaIdade[i] = idade
-
-					se (idade < 4){
-						escreva (nome, "\npossui gratuidade", "\n")
-						gratuito++
-					}senao se (idade > 80){
-						escreva (nome, "\npaga meia, ", "\n")
-						meia++
-					}senao{
-						inteira++
-					}	
-				}
+					escreva ("Deseja continuar: (S/N): ")
+					leia (continue)
+					pare
+				caso 'N': escreva ("\n\n                    DIÁRIA                    \n\n")
+						escreva ("Valor integral: ", inteira)
+						escreva ("\nMeia-entradas: ", meia)
+						escreva ("\nEntradas gratuitas: ", gratuito)
+						total = (inteira*diaria) + (meia*diaria/2)
+						escreva ("\n\nTotal: ", total, "\n", "\n")
+						para (i = 0; i < 100; i++){
+							se (listaIdade[i] > 0 e listaIdade[i] > maior){
+								maior = listaIdade[i]
+								imaior = i
+							}
+							se (listaIdade[i] > 0 e listaIdade[i] < menor){
+								menor = listaIdade[i]
+								imenor = i
+							}
+						}
+						escreva ("O mais velho é ", listaNome[imaior], " com ", listaIdade[imaior], " anos ", "\n")
+						escreva ("O mais novo é ", listaNome[imenor], " com ", listaIdade[imenor], " anos ", "\n")
+						retorne
 			}
 		}
 	}
