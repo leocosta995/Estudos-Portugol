@@ -38,22 +38,15 @@ programa
 					}
 			
 					escreva ("\nO serviço de ", empresa, " custará R$: ", total, "\n \n")
-
-					se (listaEmpresa[0] == ""){
-							listaEmpresa[i] = empresa
-							listaTotal[i] = total
-						}senao{
-							i++		
-					}
 					
 					faca{
-						se (listaEmpresa[i] == ""){
-							listaEmpresa[i] = empresa
-							listaTotal[i] = total
-						}senao{
+						se (listaEmpresa[i] != ""){
 							i++		
 						}
 					}enquanto (listaEmpresa[i] != "")
+
+					listaEmpresa[i] = empresa
+					listaTotal[i] = total
 					
 					escreva ("Deseja continuar? (S/N): ")
 					leia (opcoes)
